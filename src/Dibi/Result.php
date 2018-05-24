@@ -164,7 +164,7 @@ class Result implements IDataSource
 	{
 		$row = $this->getResultDriver()->fetch(true);
 		if ($row === null) {
-			return null;
+			return false;
 		}
 		$this->fetched = true;
 		$this->normalize($row);
@@ -185,7 +185,7 @@ class Result implements IDataSource
 	{
 		$row = $this->getResultDriver()->fetch(true);
 		if ($row === null) {
-			return null;
+			return false;
 		}
 		$this->fetched = true;
 		$this->normalize($row);

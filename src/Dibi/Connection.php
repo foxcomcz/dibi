@@ -489,7 +489,7 @@ class Connection implements IConnection
 	 * @param  mixed  ...$args
 	 * @throws Exception
 	 */
-	public function fetch(...$args): ?Row
+	public function fetch(...$args)
 	{
 		return $this->query($args)->fetch();
 	}
